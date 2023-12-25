@@ -1,7 +1,10 @@
 package com.bountiful.loyaltysystem.persistence.entities;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+@JsonDeserialize(using = GenderDeserializer.class)
 public enum Gender {
-    MALE("MAlE"), FEMALE("FEMALE"), UNKNOWN("UNKNOWN");
+    MALE("MALE"), FEMALE("FEMALE"), UNKNOWN("UNKNOWN");
     String gender;
 
     Gender(String gender) {
